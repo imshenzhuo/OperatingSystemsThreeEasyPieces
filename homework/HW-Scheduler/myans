@@ -1,0 +1,28 @@
+response time = first sched time - arrive time
+turnaround time = finish time - arrive time
+
+1. 
+	200, 200, 200
+	FIFO: resTime = 0, 200, 400		turnTime = 200, 400, 600
+	SJF:  resTime = 0, 200, 400		turnTime = 200, 400, 600
+
+2. 
+	100, 200, 300
+	FIFO: resTime = 0, 100, 300		turnTime = 100, 300, 600
+	SJF:  resTime = 0, 100, 300		turnTime = 100, 300, 600
+
+ps 当顺序改变, SJF优于FIFO
+
+3.
+	1. 200, 200, 200
+		resTime = 0, 1, 2	turnTime = 598, 599, 600
+	2. 100, 200, 300
+		resTime = 0, 1, 2	turnTime = 300, 500, 600
+
+4. Jobs已经有序(升序)的情况下, FIFO和SJF是一样的效果
+
+5  Jobs的长度和RR的间隔相等
+
+6. resTime increase
+
+7. 响应时间随着间隔线性增长 worst resTime = N * q
